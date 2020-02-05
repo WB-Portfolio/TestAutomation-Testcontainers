@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -14,7 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Logger;
+
 
 import static steps.Initiator.chrome;
 
@@ -23,7 +24,7 @@ public class MyStepdefs {
 
 
 
-        private final Logger logger = Logger.getLogger(String.valueOf(MyStepdefs.class));
+        private final Logger logger = Logger.getLogger(MyStepdefs.class);
         private final RemoteWebDriver driver = chrome.getWebDriver();
 
 
